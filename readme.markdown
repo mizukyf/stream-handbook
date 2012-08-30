@@ -2,11 +2,12 @@
 # introduction
 -->
 # イントロダクション
+
 <!--
 This document covers the basics of how to write [node.js](http://nodejs.org/)
 programs with [streams](http://nodejs.org/docs/latest/api/stream.html).
 -->
-このドキュメントは[ストリーム](http://nodejs.org/docs/latest/api/stream.html)を用いた[node.js](http://nodejs.org/)プログラムの基本的な書き方を説明します。
+このドキュメントは[ストリーム](http://nodejs.org/docs/latest/api/stream.html)を用いた[node.js](http://nodejs.org/)プログラムの基本的な書き方について説明します。
 
 ```
 "We should have some ways of connecting programs like garden hose--screw in
@@ -18,6 +19,7 @@ another way. This is the way of IO also."
 
 ***
 
+<!--
 Streams come to us from the earliest days of unix and have proven themselves
 over the decades as a dependable way to compose large systems out of small
 components that
@@ -29,7 +31,10 @@ is used by the core libraries and can also be used by user-space modules.
 Similar to unix, the node stream module's primary composition operator is called
 `.pipe()` and you get a backpressure mechanism for free to throttle writes for
 slow consumers.
+-->
+ストリームはUnixの初期段階から登場し、[1つのことをキチンとやりきる](http://www.faqs.org/docs/artu/ch01s06.html)小さなコンポーネントを組み合わせて巨大なシステムを作り上げる信頼できる手法であることを、数十年に渡って証明してきました。Unixでは、ビルトイン[ストリームモジュール](http://nodejs.org/docs/latest/api/stream.html)がコアライブラリやユーザ領域のモジュールによって用いられています。Unixと同様に、Nodeのストリームモジュールの基礎となる合成演算子は ``.pipe()`` と呼ばれ、遅い消費者への書き出しを自由に調整するための背圧メカニズムも備わっています。
 
+<!--
 Streams can help to
 [separate your concerns](http://www.c2.com/cgi/wiki?SeparationOfConcerns)
 because they restrict the implementation surface area into a consistent
@@ -38,13 +43,18 @@ interface that can be
 You can then plug the output of one stream to the input of another and
 [use libraries](http://npmjs.org) that operate abstractly on streams to
 institute higher-level flow control.
+-->
+ストリームは、実装の表層部を[再利用](http://www.faqs.org/docs/artu/ch01s06.html#id2877537)されやすい一貫性のあるインタフェースに限定することによって、[関心の分離](http://www.c2.com/cgi/wiki?SeparationOfConcerns)を促進します。そのため、1つのストリームの出力を他のストリームの入力へと繋ぐことができるのです。また、抽象的にストリームを操作する[ライブラリを用いる](http://npmjs.org)ことで、高レベルなフローコントロールを導入することもできます。
 
+<!--
 Streams are an important component of
 [small-program design](https://michaelochurch.wordpress.com/2012/08/15/what-is-spaghetti-code/)
 and [unix philosophy](http://www.faqs.org/docs/artu/ch01s06.html)
 but there are many other important abstractions worth considering.
 Just remember that [technical debt](http://c2.com/cgi/wiki?TechnicalDebt)
 is the enemy and to seek the best abstractions for the problem at hand.
+-->
+ストリームは、[小さなコード設計](https://michaelochurch.wordpress.com/2012/08/15/what-is-spaghetti-code/)や[Unix哲学](http://www.faqs.org/docs/artu/ch01s06.html)において重要なコンポーネントです。しかし、他にも考慮すべき抽象的概念はたくさんあります。[技術的負債](http://c2.com/cgi/wiki?TechnicalDebt)は敵であることと、目の前にある問題に対する最適な抽象的概念を探し求めることを忘れないでください。
 
 ***
 
