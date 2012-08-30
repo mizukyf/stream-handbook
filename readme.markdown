@@ -6,7 +6,7 @@
 This document covers the basics of how to write [node.js](http://nodejs.org/)
 programs with [streams](http://nodejs.org/docs/latest/api/stream.html).
 -->
-このドキュメントは[ストリーム](http://nodejs.org/docs/latest/api/stream.html)を用いた[node.js](http://nodejs.org/)プログラムの基本的な書き方を説明しています。
+このドキュメントは[ストリーム](http://nodejs.org/docs/latest/api/stream.html)を用いた[node.js](http://nodejs.org/)プログラムの基本的な書き方を説明します。
 
 ```
 "We should have some ways of connecting programs like garden hose--screw in
