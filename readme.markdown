@@ -1,7 +1,12 @@
+<!--
 # introduction
-
+-->
+# イントロダクション
+<!--
 This document covers the basics of how to write [node.js](http://nodejs.org/)
 programs with [streams](http://nodejs.org/docs/latest/api/stream.html).
+-->
+このドキュメントは[ストリーム](http://nodejs.org/docs/latest/api/stream.html)を用いた[node.js](http://nodejs.org/)プログラムの基本的な書き方を説明しています。
 
 ```
 "We should have some ways of connecting programs like garden hose--screw in
@@ -43,7 +48,10 @@ is the enemy and to seek the best abstractions for the problem at hand.
 
 ***
 
+<!--
 # why you should use streams
+-->
+# なぜストリームを使うべきなのか
 
 I/O in node is asynchronous, so interacting with the disk and network involves
 passing callbacks to functions. You might be tempted to write code that serves
@@ -262,7 +270,10 @@ these future streams will look like.
 
 ***
 
+<!--
 # built-in streams
+-->
+# ビルトインストリーム
 
 These streams are built into node itself.
 
