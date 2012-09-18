@@ -139,7 +139,7 @@ The biggest benefit of streams is their versatility. We can
 [use a module](https://npmjs.org/) that operates on streams to make that example
 even simpler:
 -->
-しかし、このサンプルは最初のものよりもずっと良いのですが、まだ冗長です。Streamの一番大きい利点は、Streamが多能であるという点です。Streamを扱う[モジュール](https://npmjs.org/)を使ってもっとシンプルなサンプルを作ってみましょう。
+しかし、このサンプルは最初のものよりもずっと良いのですが、まだ冗長です。Streamの一番大きい利点は、Streamが多機能であるという点です。Streamを扱う[モジュール](https://npmjs.org/)を使ってもっとシンプルなサンプルを作ってみましょう。
 
 ``` js
 var http = require('http');
@@ -155,7 +155,7 @@ server.listen(8000);
 With the [filed module](http://github.com/mikeal/filed) we get mime types, etag
 caching, and error handling for free in addition to a nice streaming API.
 -->
-[filedモジュール](http://github.com/mikeal/filed)を使うと、mimeタイプ・etagキャシュや例外処理などを素晴しいStream APIを苦労無く使うことができます。
+[filedモジュール](http://github.com/mikeal/filed)を使うと、mimeタイプ・etagキャシュや例外処理などの素晴しいStream APIを苦労無く使うことができます。
 
 <!--
 Want compression? There are streaming modules for that too!
