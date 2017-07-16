@@ -100,7 +100,7 @@ serves lots of users concurrently. The latency will also be high as users will
 need to wait for the entire file to be read before they start receiving the
 contents.
 -->
-このコードは動きはしますが、長ったらしい上に、毎回のリクエストごとに`data.txt`ファイルの全体をバッファをメモリに書き込み、その後でクライアントに結果を返します。もし、`data.txt`が非常に大きい場合は、このプログラムはユーザー数と同じだけの大量のメモリを消費しはじめるでしょう。また、ユーザーがコンテンツを受け取る前には、ファイルの全てが読み込まれるのを待たなければならず、レイテンシは非常に高いものになるでしょう。
+このコードは動きはしますが、長ったらしい上に、毎回のリクエストごとに`data.txt`ファイルの全体をバッファをメモリに書き込み、その後でクライアントに結果を返します。もし、`data.txt`が非常に大きい場合は、このプログラムはユーザ数と同じだけの大量のメモリを消費しはじめるでしょう。また、ユーザがコンテンツを受け取る前には、ファイルの全てが読み込まれるのを待たなければならず、レイテンシは非常に高いものになるでしょう。
 
 <!--
 Luckily both of the `(req, res)` arguments are streams, which means we can write
