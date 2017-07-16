@@ -214,7 +214,7 @@ that have a
 function and expected to act in a certain way depending if the stream is
 readable, writable, or both (duplex).
 -->
-ストリームは単なる[EventEmitter](http://nodejs.org/docs/latest/api/events.html#events_class_events_eventemitter)に[.pipe()](http://nodejs.org/docs/latest/api/stream.html#stream_stream_pipe_destination_options)メソッドをつけたもので、readableか、writableか、それともその両方か(duplex)に応じて、決められた動作を期待されます。
+ストリームは単なる[EventEmitter](http://nodejs.org/docs/latest/api/events.html#events_class_events_eventemitter)に[.pipe()](http://nodejs.org/docs/latest/api/stream.html#stream_stream_pipe_destination_options)メソッドをつけ加えたもので、readableか、writableか、それともその両方か(duplex)に応じて、決められた動作をすることが求められるインターフェースです。
 
 <!--
 To create a new stream, just do:
