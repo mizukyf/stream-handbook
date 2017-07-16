@@ -48,7 +48,7 @@ You can then plug the output of one stream to the input of another and
 [use libraries](http://npmjs.org) that operate abstractly on streams to
 institute higher-level flow control.
 -->
-ストリームは、実装の表面を[再利用](http://www.faqs.org/docs/artu/ch01s06.html#id2877537)しやすい一貫性したインタフェースとして限定することで、[関心の分離](http://www.c2.com/cgi/wiki?SeparationOfConcerns)を促進します。だからこそ、1つのストリームの出力を他のストリームの入力へとつなぐことができるのです。また、抽象的にストリームを操作する[ライブラリを用いる](http://npmjs.org)ことで、高レベルなフローコントロールを導入することもできます。
+ストリームは、実装の表面を[再利用](http://www.faqs.org/docs/artu/ch01s06.html#id2877537)しやすい一貫生を持ったインタフェースとして限定することで、[関心の分離](http://www.c2.com/cgi/wiki?SeparationOfConcerns)を促進します。だからこそ、1つのストリームの出力を他のストリームの入力へとつなぐことができるのです。また、抽象的にストリームを操作する[ライブラリを用いる](http://npmjs.org)ことで、高レベルなフローコントロールを導入することもできます。
 
 <!--
 Streams are an important component of
