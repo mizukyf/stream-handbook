@@ -297,7 +297,7 @@ In this example the `'data'` events have a string payload as the first argument.
 Buffers and strings are the most common types of data to stream but it's
 sometimes useful to emit other types of objects.
 -->
-この例では`data`イベントは第1引数に文字列を格納しています。ストリームで扱うデータはバッファや文字列が最も一般的ですが、他のオブジェクトをemitとするのが有効な場合もあるでしょう。
+この例では`data`イベントは第1引数に文字列を格納しています。ストリームで扱うデータはバッファや文字列が最も一般的ですが、他のオブジェクトを放出（emit）する方が便利な場合もあるでしょう。
 
 <!--
 Just make sure that the types you're emitting as data is compatible with the
@@ -305,8 +305,8 @@ types that the writable stream you're piping into expects.
 Otherwise you can pipe into an intermediary conversion or parsing stream before
 piping to your intended destination.
 -->
-emitしようとしているデータが、パイプしようとしているwritableストリームが期待するデータと互換性があるかどうかには注意してください。
-そうでない場合は、もともと想定している相手にパイプする前に、中継・変換用、パース用のストリームをパイプすることもできます。
+放出しようとしているデータが、パイプしようとしているwritableストリームが期待するデータと互換性があるかどうかには注意してください。
+そうでない場合は、もともと想定している相手にパイプする前に、中間変換用もしくはパース用のストリームをパイプすることもできます。
 
 <!--
 ## writable
@@ -381,7 +381,7 @@ because people expect end to behave the way it does in core.
 Backpressure is the mechanism that streams use to make sure that readable
 streams don't emit data faster than writable streams can consume data.
 -->
-背圧は、writableストリームがデータを消費するよりも速いスピードで、readableストリームからのデータがemitされないようにするための仕組みです。
+背圧は、writableストリームがデータを消費するよりも速いスピードで、readableストリームからのデータが放出されないようにするための仕組みです。
 
 <!--
 Note: the API for handling backpressure is changing substantially in future
@@ -429,7 +429,7 @@ writable stream wants the upstream to slow down. The readable stream that
 `pause()` was called on should stop emitting data but that isn't always
 possible.
 -->
-readableストリームの`pause()`が呼ばれたということは、下流にあるwritableストリームが上流のreadableストリームの速さを緩やかにするよう望んでいることを意味します。`pause()`が呼ばれたら、readableストリームはデータのemitを止めるべきです。ただ、これは必ず可能なわけではありません。
+readableストリームの`pause()`が呼ばれたということは、下流にあるwritableストリームが上流のreadableストリームの速さを緩やかにするよう望んでいることを意味します。`pause()`が呼ばれたら、readableストリームはデータの放出を止めるべきです。ただ、これは必ず可能なわけではありません。
 
 <!--
 When the downstream is ready for more data, the readable stream's `resume()`
@@ -1234,7 +1234,7 @@ The object stream can then be fed into
 to serialize the objects and from there the serialized stream can be piped into
 the remote browser.
 -->
-まず、サーバサイドのwebsocketハンドラとしては[shoe](http://github.com/substack/shoe)が使えます。EventEmiterを、オブジェクトをemit可能なストリームに変換するには[emit-stream](https://github.com/substack/emit-stream)が利用できます。オブジェクトのストリームは[JSONStream](https://github.com/dominictarr/JSONStream)によってシリアライズされ、シリアライズされたストリームはリモートのブラウザにパイプできます。
+まず、サーバサイドのwebsocketハンドラとしては[shoe](http://github.com/substack/shoe)が使えます。EventEmiterを、オブジェクトを放出可能なストリームに変換するには[emit-stream](https://github.com/substack/emit-stream)が利用できます。オブジェクトのストリームは[JSONStream](https://github.com/dominictarr/JSONStream)によってシリアライズされ、シリアライズされたストリームはリモートのブラウザにパイプできます。
 
 ``` js
 var EventEmitter = require('events').EventEmitter;
@@ -1292,7 +1292,7 @@ Meanwhile on the browser side of things just parse the json shoe stream and pass
 the resulting object stream to `eventStream()`. `eventStream()` just returns an
 event emitter that emits the server-side events:
 -->
-ブラウザ側では、json形式のshoeストリームをパースして、結果のオブジェクトストリームを`eventStram()`に渡します。`eventStream()`はサーバサイドのイベントをemitするEventEmitterを返します。
+ブラウザ側では、json形式のshoeストリームをパースして、結果のオブジェクトストリームを`eventStram()`に渡します。`eventStream()`はサーバ側のイベントを発行するEventEmitterを返します。
 
 ``` js
 var shoe = require('shoe');
