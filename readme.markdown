@@ -74,7 +74,7 @@ I/O in node is asynchronous, so interacting with the disk and network involves
 passing callbacks to functions. You might be tempted to write code that serves
 up a file from disk like this:
 -->
-NodeのI/Oは非同期なので、ハードディスクやネットワークとやり取りする際には、関数にコールバックを渡す必要があります。ファイルを配信するサーバーを以下のように書きたい衝動に駆られるでしょう。
+NodeのI/Oは非同期なので、ハードディスクやネットワークとやり取りする際には、関数にコールバックを渡す必要があります。ファイルを配信するサーバを以下のように書きたい衝動に駆られるでしょう。
 
 ``` js
 var http = require('http');
@@ -275,7 +275,7 @@ function createStream () {
             clearInterval(iv);
         }
     }, 1000);
-    
+
     return s;
 }
 
@@ -289,7 +289,7 @@ substack : ~ $ node rs.js
 2
 3
 4
-substack : ~ $ 
+substack : ~ $
 ```
 
 <!--
@@ -339,7 +339,7 @@ s.write = function (buf) {
 
 s.end = function (buf) {
     if (arguments.length) s.write(buf);
-    
+
     s.writable = false;
     console.log(bytes + ' bytes written');
 };
@@ -870,7 +870,7 @@ m.on('update', function cb (key) {
     // wait until we've gotten at least one count value from the network
     if (key !== 'count') return;
     m.removeListener('update', cb);
-    
+
     setInterval(function () {
         m.set('count', Number(m.get('count')) + 1);
     }, 100);
