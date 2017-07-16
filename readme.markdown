@@ -1234,7 +1234,7 @@ The object stream can then be fed into
 to serialize the objects and from there the serialized stream can be piped into
 the remote browser.
 -->
-まず、サーバサイドのwebsocketハンドラとしては[shoe](http://github.com/substack/shoe)が使えます。EventEmiterを、オブジェクトを放出可能なストリームに変換するには[emit-stream](https://github.com/substack/emit-stream)が利用できます。オブジェクトのストリームは[JSONStream](https://github.com/dominictarr/JSONStream)によってシリアライズされ、シリアライズされたストリームはリモートのブラウザにパイプできます。
+まず、サーバ側のwebsocketハンドラとしては[shoe](http://github.com/substack/shoe)が使えます。EventEmiterを、オブジェクトを放出可能なストリームに変換するには[emit-stream](https://github.com/substack/emit-stream)が利用できます。オブジェクトのストリームは[JSONStream](https://github.com/dominictarr/JSONStream)によってシリアライズされ、シリアライズされたストリームはリモートのブラウザにパイプできます。
 
 ``` js
 var EventEmitter = require('events').EventEmitter;
@@ -1332,7 +1332,7 @@ Then drop a `<script src="/bundle.js"></script>` into some html and open it up
 in a browser to see server-side events streamed through to the browser side of
 things.
 -->
-あとは適当なhtmlに`<script src="/bundle.js"></script>`と貼りつけてブラウザで開くと、サーバサイドのイベントがブラウザにストリームされてくるのがわかります。
+あとは適当なhtmlに`<script src="/bundle.js"></script>`と貼りつけてブラウザで開くと、サーバ側のイベントがブラウザにストリームされてくるのがわかります。
 
 <!--
 With this streaming approach you can rely more on tiny reusable components that
