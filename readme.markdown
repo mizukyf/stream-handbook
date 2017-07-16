@@ -932,7 +932,7 @@ connection. Protocols with this property are often called symmetric protocols.
 See [dnode](https://github.com/substack/dnode) for another example of a
 symmetric protocol.
 -->
-ここで取り上げた例において、サーバとは、接続してくるクライアントと同等の権限しか持たないノードの1つに過ぎません。「クライアント」「サーバ」という用法は、単に誰がコネクションの口火を切るかに関連しているだけで、状態の同期がどのような手順に従うかとは無関係です。このような性質を備えたプロトコルはしばしばシンメトリック・プロトコルと呼ばれています。シンメトリック・プロトコルに関する別の例として[dnode](https://github.com/substack/dnode)も見てください。
+ここで取り上げた例において、サーバとは、接続してくるクライアントと同等の権限しか持たないノードの1つに過ぎません。「クライアント」「サーバ」という用語法は、単に誰がコネクションの口火を切るかに関連しているだけで、状態の同期がどのような手順に従うかとは無関係です。このような性質を備えたプロトコルはしばしばシンメトリック・プロトコルと呼ばれています。シンメトリック・プロトコルに関する別の例として[dnode](https://github.com/substack/dnode)も見てください。
 
 ***
 <!--
